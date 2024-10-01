@@ -1,0 +1,30 @@
+---
+const { href, Icon, label } = Astro.props;
+---
+
+<a href={href} target="_blank" class="icon-button">
+  <Icon size={24} color="#ece2d0" />
+  <span class="icon-label">{label}</span>
+</a>
+
+<style>
+  .icon-button {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #ece2d0; /* Color crema */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 8px 12px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    color: #ece2d0; /* Color del texto */
+    transition: background-color 0.3s ease;
+  }
+  
+  .icon-button:hover {
+    background-color: rgba(236, 226, 208, 0.1); /* Fondo claro al pasar el cursor */
+  }
+  
+  .icon-label {
+    margin-left: 8px; /* Espaciado entre el icono y el texto */
+    font-size: 16px; /* Tamaño de la fuente */
+  }
+</style>

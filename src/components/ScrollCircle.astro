@@ -1,0 +1,17 @@
+---
+// components/ScrollCircle.astro
+---
+
+<div id="background-circle" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-full opacity-50 z-0"></div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const circle = document.getElementById('background-circle');
+    if (circle) {
+      const scrollPosition = window.scrollY;
+      const newSize = 100 + scrollPosition * 0.5;
+      circle.style.width = newSize + 'px';
+      circle.style.height = newSize + 'px';
+    }
+  });
+</script>
